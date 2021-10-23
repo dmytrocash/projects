@@ -1,5 +1,4 @@
 import random
-from sys import excepthook
 
 EASY_LEVEL_ATTEMPTS = 10
 HARD_LEVEL_ATTEMPTS = 5
@@ -23,8 +22,6 @@ def check_number(answer, guess_number, attempts):
         return attempts - 1
     else:
         print(f"You got it! The answer is {answer}.")
-
-
 
 def game():
     print("Welcome to the Number Guessing Game! I'm thinking of a number between 1 and 100.")
