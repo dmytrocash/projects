@@ -27,7 +27,7 @@ data ={
 responce = session.post(auth_url, data=data, headers=real_header).text
 # print(responce)
 
-# №2. ИЗВЛЕЧЕНИЕ ДАННЫХ С САЙТА И СОХРАНЕНИЕ В ФАЙЛ
+# №2. ИЗВЛЕЧЕНИЕ ДАННЫХ С САЙТА
 
 url = "http://snt.od.ua/ru/vnov.html?resPerPage=all"
 my_request = session.get(url) # после авторизации меняем request на session
@@ -48,16 +48,14 @@ for price in product_prices:
 		
 # №3. СОХРАНЕНИЕ ДАННЫХ В ФАЙЛ
 
-def save_file(items, path):
-    with open(path, 'w',  encoding='utf8', newline='') as file:
-        writer = csv.writer(file, delimiter=',')
-        writer.writerow(['Имя', 'Базовая цена'])
-        for item in items:
-            writer.writerow([item['title'], item['cost']])
+# def save_file(items, path):
+#     with open(path, 'w',  encoding='utf8', newline='') as file:
+#         writer = csv.writer(file, delimiter=',')
+#         writer.writerow(['Имя', 'Базовая цена'])
+#         for item in items:
+#             writer.writerow([item['title'], item['cost']])
 
-
-
-
+# ЧЕРНОВИК
 
 # while True:
 
