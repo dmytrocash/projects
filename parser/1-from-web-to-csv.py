@@ -53,5 +53,3 @@ with open('products.csv', 'w', newline='') as csvfile:
     writer.writerow(['Наименование товара', 'Оптовая цена'])
     for item in common_list:
         writer.writerow(item)
-
-# №4. ВЫВЕСТИ ДАННЫЕ ИЗ ФАЙЛА CSV НА САЙТ
