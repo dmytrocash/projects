@@ -1,3 +1,4 @@
+# http://localhost:8080/products
 import requests # нужна для работы с html запросами
 from bs4 import BeautifulSoup as bs # нужна для извлечения данных из файлов HTML и XML
 import csv
