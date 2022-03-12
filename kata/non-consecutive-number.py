@@ -11,11 +11,11 @@ def first_non_consecutive(arr):
     check_arr = list(range(arr[0], arr[-1]+1))
     newlist = []
     for x,y in zip(arr, check_arr):
-        if x == y:
-            pass
-        elif x != y:
+        if x != y:
             newlist.append(x)
             return newlist[0]
+        else:
+            return 0
 
 # alternative solutions:
 
