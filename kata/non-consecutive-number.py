@@ -14,8 +14,6 @@ def first_non_consecutive(arr):
         if x != y:
             newlist.append(x)
             return newlist[0]
-        else:
-            return 0
 
 # alternative solutions:
 
