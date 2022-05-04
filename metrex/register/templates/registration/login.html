@@ -1,0 +1,47 @@
+{% extends 'products/base/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <form method="POST" class='form-group'>
+    {% csrf_token %}
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    <body class="text-center"> 
+    <main class="form-signin">
+        <style>
+          .container{
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              height:15vh;
+            }
+        </style>
+          <div class="container"></div>
+            <div class="Centerdive"></div>
+              <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+              <div class="form-floating">
+                  <input type="text" class="form-control" name='username' placeholder="Username" style="width: 400px; height: 50px;">
+              </div>
+              <div class="form-floating">
+                  <input type="password" class="form-control" name="password" placeholder="Password" style="width: 400px; height: 50px;">
+              </div>
+              <p>Don't have an acount? <a href="/register/">Sign up</a></p>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <div style="text-align: center;">
+                  <button class="w-30 btn btn-lg btn-primary" type="submit">Sign in</button>
+              </div>
+            </div>
+          </div>
+    </main> 
+    </body>      
+  </form>
+</div>
+{% endblock %}
