@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <title>{% block title %}Products list{% endblock %}</title>
+</head>
+
+<body>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="/products" class="navbar-brand">Products</a>
+                    <form class="d-flex">
+                        <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-link" type="button"><a href="/login">Login</a></button>
+                        <button class="btn btn-link" type="button"><a href="/logout">Logout</a></button>
+                    </div>
+                </div>
+            </nav>
+            {% block content %}{% endblock %}
+        </div>
+    </div> 
+    
+</body>
+</html>
