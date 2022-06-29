@@ -15,10 +15,9 @@ def main():
             print(c)
             if c is False:
                 break
-        except ZeroDivError:
-            print('Dividing by zero is a silly thing to do!')
-        except WrongInputError:
-            print('Type math expression in right format. E.g. 1 + 99')
+
+        except (ZeroDivError, WrongInputError) as exc:
+            print(exc)
 
 
 if __name__ == '__main__':

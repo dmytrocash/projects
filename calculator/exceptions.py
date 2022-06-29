@@ -5,11 +5,11 @@ class CustomError(Exception):
 
 class ZeroDivError(CustomError):
     def __str__(self):
-        return '{} is invalid input. Dividing by zero is a silly ' \
-               'thing to do!'.format(self.math_expression)
+        return 'Dividing by zero is a silly thing to ' \
+               'do!'
 
 
 class WrongInputError(CustomError):
     def __str__(self):
-        return '{} is invalid input. Type math expression in ' \
-               'right format. E.g. 1 + 99'.format(self.math_expression)
+        return 'Invalid input. Type math expression in ' \
+               'right format. E.g. 1 + 99'
