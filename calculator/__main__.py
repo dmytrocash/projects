@@ -23,5 +23,3 @@ def main():
 
 if __name__ == '__main__':
     print(main())
-
-# cd /Users/dmytrocash/Desktop/code/playground/calc
