@@ -1,5 +1,5 @@
-from calc.exceptions import ZeroDivError, WrongInputError
-from calc.calc import calculator
+from exceptions import ZeroDivError, WrongInputError
+from calc import calculator
 
 
 def main():

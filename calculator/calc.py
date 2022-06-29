@@ -1,4 +1,4 @@
-from .exceptions import ZeroDivError, WrongInputError
+from exceptions import ZeroDivError, WrongInputError
 
 
 def num_sum(num1, num2):
@@ -19,10 +19,10 @@ def num_division(num1, num2):
 
 def calculator(char_input):
     operations = {
-        "+": num_sum,
-        "-": num_subtraction,
-        "*": num_multiplication,
-        "/": num_division
+        '+': num_sum,
+        '-': num_subtraction,
+        '*': num_multiplication,
+        '/': num_division
     }
 
     char_list = []
