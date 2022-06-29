@@ -34,6 +34,7 @@ html_all_products = """
     </html>
 """
 
+
 def check_product(product_id, min, max):
     try:
         product_id = int(product_id)
@@ -43,10 +44,9 @@ def check_product(product_id, min, max):
     if min > product_id or product_id > max:
         return f"Error: product not in range {min} - {max}"
 
-# Откуда мы берём route?
+
 @route('/product/<product_id>')
 def product_from_db(product_id):
-    
     import sqlite3
     con = sqlite3.connect('db.db')
     cur = con.cursor()
@@ -54,19 +54,18 @@ def product_from_db(product_id):
     max = cur.fetchone()[0]
     print(max)
     min = 0
-    
     error = check_product(product_id, min, max)
     
     if error:
         return html_template.format(f"<p>{error}</p>")
     row = int(product_id)
+    print(row)
     
     # Get row from db
     product = get_product(product_id)
     print(product)
 
-    # Return html_template with product's code and name 
-    
+    # Return html_template with product's code and name
     product_info_html = f"""
     <p>Product code is: {product["code"]}</p> 
     <p>Product name is: {product["name"]}</p>
@@ -75,13 +74,12 @@ def product_from_db(product_id):
 
     return html_template.format(product_info_html)
 
+
 @route('/products')
 def products():
-    
     import sqlite3
     con = sqlite3.connect('db.db')
     cur = con.cursor()
-    
     cur.execute("select id, name from product")
     result = cur.fetchall()
     print(result)
@@ -101,26 +99,21 @@ def products():
 
 
 def get_product(product_id):
-        
     # Create DB connection
     import sqlite3
     con = sqlite3.connect('db.db')
     cur = con.cursor()
-    # --------
-
     cur.execute("select code, name, price from product where id=:id", {"id": product_id})
     result = cur.fetchall()
-    
     # result = [('1011', 'Plate', '300')]
+
     product_code_value = result[0][0]
     product_name_value = result[0][1]
     product_price_value = result[0][2]
 
-        
     # Close DB connection
     con.close()
-    
-    # --------
+
     return {"code": product_code_value, "name": product_name_value, "price": product_price_value}
 
 
