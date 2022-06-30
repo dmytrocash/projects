@@ -1,1 +1,1 @@
-An important information should be here!
+This repository contains projects and exercises that have been part of my education.
