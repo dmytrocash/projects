@@ -2,9 +2,4 @@ This repository contains projects and exercises that have been part of my educat
 
 ## Projects
 
-* [Calculator](https://github.com/dmytrocash/projects/tree/feature/refactoring/calculator)
-
-Simple calculator which works with positive integers only.
-* [Calculator](https://github.com/dmytrocash/projects/tree/feature/refactoring/calculator)
-
-Simple calculator which works with positive integers only.
+* [Calculator](https://github.com/dmytrocash/projects/tree/feature/refactoring/calculator) - simple calculator which works with positive integers only.
