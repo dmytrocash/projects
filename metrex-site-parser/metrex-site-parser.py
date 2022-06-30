@@ -172,10 +172,10 @@ product_info()
 # https://metrex.kiev.ua/site_search?search_term=10602
 # https://metrex.kiev.ua/ua/p1489767212-samorez-dlya-profnastila.html
 
-# python3 metrex-parser.py 10602 -p -s -r=2
-# python3 metrex-parser.py 10602 -p -s -r=4 -c=uah
-# python3 metrex-parser.py 10602 -p -s -r=7 -c=usd
-# python3 metrex-parser.py 10602 -p -s -r=10 -c=eur
+# python3 metrex-site-parser.py 10602 -p -s -r=2
+# python3 metrex-site-parser.py 10602 -p -s -r=4 -c=uah
+# python3 metrex-site-parser.py 10602 -p -s -r=7 -c=usd
+# python3 metrex-site-parser.py 10602 -p -s -r=10 -c=eur
 
 
 
