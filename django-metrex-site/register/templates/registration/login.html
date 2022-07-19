@@ -8,7 +8,6 @@
   <form method="POST" class='form-group'>
     {% csrf_token %}
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
     <body class="text-center"> 
     <main class="form-signin">
@@ -27,9 +26,12 @@
                   <input type="text" class="form-control" name='username' placeholder="Username" style="width: 400px; height: 50px;">
               </div>
               <div class="form-floating">
+                  <input type="text" class="form-control" name='phone' placeholder="Phone number" style="width: 400px; height: 50px;">
+              </div>
+              <div class="form-floating">
                   <input type="password" class="form-control" name="password" placeholder="Password" style="width: 400px; height: 50px;">
               </div>
-              <p>Don't have an acount? <a href="/register/">Sign up</a></p>
+              <p>Don't have an account? <a href="/register/">Sign up</a></p>
               <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me"> Remember me
@@ -39,9 +41,8 @@
                   <button class="w-30 btn btn-lg btn-primary" type="submit">Sign in</button>
               </div>
             </div>
-          </div>
-    </main> 
-    </body>      
+    </main>
+    </body>
   </form>
 </div>
 {% endblock %}

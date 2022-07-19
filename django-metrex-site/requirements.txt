@@ -3,3 +3,4 @@ Django==4.0.6
 pathlib==1.0.1
 sqlparse==0.4.2
 Pillow==9.2.0
+django-crispy-forms==1.14.0
