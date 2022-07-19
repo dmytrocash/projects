@@ -164,3 +164,7 @@ cython_debug/
 .DS_Store
 .DS_Store?
 ._*
+
+db.sqlite3
+metrex-venv
+uploads
