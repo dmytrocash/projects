@@ -1,0 +1,21 @@
+{% extends 'products/base/base.html' %}
+
+{% block title %}{{ products.title }}{% endblock %}
+
+{% block content %}
+
+<div class="card mb-3">
+    <div class="text-center">
+      <img src="{{ products.image.url }}" class="rounded" width="300" alt="{{ products.title }}">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ products.title }}</h4>
+      <h5>Код товара: {{ products.code }}</h5>
+      <h5>Цена: {{ products.price }}</h5>
+      <button type="button" id="{{products.code}}" class="btn btn-success">Добавить в корзину</button>
+      <p></p>
+      <p class="card-text">{{ products.description }}</p>
+
+    </div>
+</div>
+{% endblock %}

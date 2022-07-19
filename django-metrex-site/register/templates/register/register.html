@@ -1,0 +1,28 @@
+{% extends 'products/base/base.html' %}
+
+{% block title %}Registration{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<center><form method="POST" class="text-center" style="width: 400px; height: 50px;">
+    <style>
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:80vh;
+          }
+    </style>
+        <div class="container">
+            <div class="Centerdive">
+                <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="w-30 btn btn-lg btn-primary" type="submit">Register</button>
+            </div>
+        </div>
+</form></center>
+
+{% endblock %}

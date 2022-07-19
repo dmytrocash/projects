@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Корзина</title>
+
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'cart/index.css' %}">
+	<script src="{% static 'cart/index.js' %}" defer type="text/javascript"></script>
+</head>
+<body>
+	<div class="nav-bar">
+		<a href="../shop">Товары</a>
+	</div>
+
+	{% if not goods %}
+		<h1>Пока ничего не выбрано</h1>
+		<a href="../shop" class="like-red-button">
+			Выбрать товары
+		</a>
+	{% else %}
+	<table>
+		<h1>Выбранные товары</h1>
+		<thead>
+			<th>Название</th>
+			<th>Цена, грн</th>
+		</thead>
+		<tbody>
+			{% for item in goods %}
+				<tr>
+					<td>{{item.name}}</td>
+					<td>{{item.price}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<p>
+		Сумма заказа:
+		<span class="full-price">
+			{{sum}} грн.
+		</span>
+	</p>
+	<br>
+	<form action="handler">
+		<label for="{{ form.client_name.id_for_label }}">
+			Как к Вам обращаться? <br>
+			Введите своё имя:
+		</label>
+		{{ form.client_name }}
+		<br>
+		<label for="{{ form.phone.id_for_label }}">Введите свой номер телефона:</label>
+		<input type="tel" id="phone" name="phone" 
+				pattern="[0-9]{10}" required="true">
+		<br>
+		<label for="{{ form.phone.id_for_label }}">Например: 0983969941</label>
+		<br>
+		<input type="submit" value="Заказать" class="like-red-button larger-font">
+	</form>
+
+	<br><br><br>
+	<button id="removeAll" class="like-red-button">
+		Удалить всё <br>
+		из корзины
+	</button>
+	
+	{% endif %}
+</body>
+</html>
